@@ -1,0 +1,41 @@
+S_H. NAME
+Holberton Simple Shell
+A a simple UNIX command-line interpreter
+B Simple_shell
+
+S_H.  SYNOPSIS
+Simple_shell [command_string]
+
+S_H. DESCRIPTION
+Shell is a UNIX term for the interactive user interface with an operating system that reads and executes commands from standard input.
+
+COMMANDS
+
+help: shows help information for the shell
+exit: quits the shell with a status code of STATUS (default is 0)
+unsetenv [VALUE]: unsets the environment variable VALUE
+setenv [VALUE]: sets the environment variable VALUE
+env: prints the environment variables
+cd [DIRECTORY]: changes the working directory
+strchr: string chaaracter in a function.
+
+Examples
+#env
+To set an environment variable
+#help
+shows help information for the shell
+
+
+S_H. Return Value
+Always 0 for success, other number means failure.
+
+S_H. OVERVIEW
+The shell reads commands from the terminal and executes them.
+
+
+S_H. OPTIONS
+Command options will be typed after the main command followed by a space
+S_H. REPORTING BUGS
+If any further bugs are found please contact the authors.
+S_H. AUTHORS
+Simple shell project created by Adedokun Adedayo and Shakirat Ibrahim

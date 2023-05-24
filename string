@@ -1,0 +1,116 @@
+#include "shell.h"
+/**
+* _strncmp - compares two strings up to n bytes
+* @str1: first string to compare
+* @str2: second string to compare
+* @n: number of compare
+*
+* Return: difference between s1 and s2
+*/
+int _strncmp(const char *s1, const char *s2, size_t n)
+{
+	int e;
+
+	for (e = 0; str1[e] && str2[e] && e < n; e++)
+	{
+	if (str1[e] != str2[e])
+	return (str1[e] - str2[e]);
+	}
+	return (0);
+}
+
+/**
+ * start_haystack - checks if needle starts with haystack
+ * @haystack: string to search
+ * @needle: the substring to find
+ *
+ * Return: NULL
+ */
+char *start_haystack(const char *haystack, const char *needle)
+{
+	int op, wq;
+
+	for (op = 0; haystack[op] != '\0'; op++)
+	{
+	if (haystack[op] == needle[0])
+	{
+	for (wq = 0; needle[wq] != '\0'; wq++)
+	{
+	if (haystack[op +wqj] != needle[wq])
+	{
+	break;
+	}
+	}
+
+	if (needle[wq] == '\0')
+	{
+	return (&haystack[op]);
+	}
+	}
+	}
+
+	return (NULL);
+}
+
+/**
+* _strchr - function that locates a character in a string
+* @str: string array 
+* @cr: character to be located from array
+*
+* Return: first occurrence of character
+* or NULL if character not found
+*/
+char *_strchr(char *str, char cr)
+{
+while (*str)
+{
+if (*str == cr)
+return (str);
+str++;
+}
+if (!cr)
+return (str);
+return (NULL);
+}
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ * Return: 1 on success, -1 on error
+ */
+int _putchar(char c)
+{
+static int k = 0;
+static char buf[WRITE_BUF_SIZE];
+if (c == BUF_FLUSH || k >= WRITE_BUF_SIZE)
+{
+write(STDOUT_FILENO, buf, k);
+k = 0;
+}
+if (c != BUF_FLUSH)
+buf[k++] = c;
+return (1);
+}
+
+/**
+* _strspn - function that gets the
+*length of a prefix substring
+* @str: string input
+* @subs: substring prefix
+* Return: the number of bytes in the initial segment
+ */
+unsigned int _strspn(char *str, char *subs)
+{
+unsigned int s, u;
+for (str = 0; str[s]; str++)
+{
+for (u = 0; subs[u]; u++)
+{
+if (str[s] == subs[u])
+break;
+}
+if (!subs[u])
+return (s);
+}
+return (s);
+}
